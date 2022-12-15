@@ -14,15 +14,19 @@ public class Vendedor implements Serializable {
     private Date dataAniversario;
     private Double salarioBase;
 
-    private Departamento Vendedor;
+    private Departamento departamento;
 
-    public Vendedor(Integer id, String nome, String email, Date dataAniversario, Double salarioBase, Departamento Vendedor) {
+    public Vendedor() {
+
+    }
+
+    public Vendedor(Integer id, String nome, String email, Date dataAniversario, Double salarioBase, Departamento departamento) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.dataAniversario = dataAniversario;
         this.salarioBase = salarioBase;
-        this.Vendedor = Vendedor;
+        this.departamento = departamento;
     }
 
     public Integer getId() {
@@ -65,12 +69,12 @@ public class Vendedor implements Serializable {
         this.salarioBase = salarioBase;
     }
 
-    public Departamento getVendedor() {
-        return Vendedor;
+    public Departamento getDepartamento() {
+        return departamento;
     }
 
-    public void setVendedor(Departamento Vendedor) {
-        this.Vendedor = Vendedor;
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
     }
 
     @Override
@@ -94,7 +98,7 @@ public class Vendedor implements Serializable {
                 ", email='" + email + '\'' +
                 ", dataAniversario=" + dataAniversario +
                 ", salarioBase=" + salarioBase +
-                ", Vendedor=" + Vendedor +
+                ", Departamento=" + departamento +
                 '}';
     }
 }
