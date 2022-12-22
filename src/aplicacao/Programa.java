@@ -17,11 +17,18 @@ public class Programa {
         Vendedor vendedor = vendedorDao.buscarPorId(3);
         System.out.println(vendedor);
 
-        System.out.println("=== Teste 1: Vendedor buscarPorDepartamento ===");
+        System.out.println("");
+        System.out.println("=== Teste 2: Vendedor buscarPorDepartamento ===");
 
         Departamento departamento = new Departamento(2, null);
 
         List<Vendedor> list = vendedorDao.buscarPorDeparta(departamento);
+        list.forEach(System.out::println);
+
+        System.out.println("");
+        System.out.println("=== Teste 3: Vendedor buscarTodos ===");
+
+        list = vendedorDao.buscarTodos();
         list.forEach(System.out::println);
 
 
