@@ -33,6 +33,12 @@ public class Programa {
         vendedorDao.inserir(vendedor1);
         System.out.println("Inserido! Novo ID = " + vendedor1.getId());
 
+        System.out.println("");
+        System.out.println("=== Teste 5: atualizar vendedor ===");
+        vendedor = vendedorDao.buscarPorId(1);
+        vendedor.setNome("Marta Waine");
+        vendedorDao.atualizar(vendedor);
+        System.out.println("Atualização completa");
 
     }
 
