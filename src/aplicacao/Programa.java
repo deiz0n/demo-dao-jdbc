@@ -7,10 +7,13 @@ import entidades.Vendedor;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class Programa {
 
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
 
         VendedorDao vendedorDao = DaoFactory.criarVendedorDao();
 
@@ -39,6 +42,14 @@ public class Programa {
         vendedor.setNome("Marta Waine");
         vendedorDao.atualizar(vendedor);
         System.out.println("Atualização completa");
+
+        System.out.println("=== Teste 6: deletar vendedor ===");
+        System.out.print("Digite o id do vendedor que deseja deletar: ");
+        int n = sc.nextInt();
+        vendedorDao.deletarPorId(n);
+        System.out.println("Delete concluido");
+
+        sc.close();
 
     }
 
